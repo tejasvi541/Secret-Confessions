@@ -26,7 +26,7 @@ app.use(bodyParser.urlencoded({
 
 // Setting up Session
 app.use(session({
-    secret : "Our big daddy is your grandfather",
+    secret : `${process.env.BIG_SECRET}`,
     resave : false,
     saveUninitialized : false
 }));
